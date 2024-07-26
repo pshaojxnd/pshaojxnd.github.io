@@ -23,7 +23,148 @@
 				</a>
 			</h1>
         </div>
-    
+    <!-- menu -->
+        <div id="menu">
+            <ul>
+                <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="pubs.html"><span>Publications</span></a></li>
+                <li id="current"><a href="chinese.html"><span>中文介绍</span></a></li>
+            </ul>
+        </div>
+        <div class="content" style="text-align: justify; text-justify: inter-character">
+            <!-- content-wrap starts here -->
+            <div id="content-wrap">
+
+                <div id="main" class="chinese">
+
+                    <h2 style="font-size: 20px;"><img src="images/paper.png" alt="" style="width: 15px;height: 15px;"> 个人概况</h2>
+                    
+                        <div class="Introduction" >
+                            <p><b style="color: brown">邵鹏</b>，男，1983年生，博士，江西农业大学讲师，现任计算机与信息工程学院计算机科学与技术系副主任。2016年毕业于武汉大学计算机软件与理论专业获工学博士学位。目前主要从事智能优化算法设计及应用方面的研究，主持了江西省教育厅科技计划项目2项；以第一作者和通讯作者发表了论文20多篇。
+                            </p>
+
+                            <p><b style="color: brown">地址</b>：江西省南昌市志敏大道江西农业大学计算机与信息工程学院 </p>
+
+                            <p>
+                                <b style="color: brown">邮箱</b>：<span class="blue">pshao@whu.edu.cn</span>
+                            </p>
+                        </div>
+                    
+                    <br>
+
+
+
+                    <h2 style="font-size: 20px;"><img src="images/paper.png" alt="" style="width: 15px;height: 15px;">&nbsp;教育和工作经历</h2>
+                    <ul>
+                        <div>
+			    <li>2021.01-至今，江西农业大学，讲师</li>
+                            
+                        </div>
+                    </ul>
+                    <br>
+					
+					
+		    <h2 style="font-size: 20px;"><img src="images/paper.png" alt="" style="width: 15px;height: 15px;">&nbsp;所获荣誉</h2>
+		    <ul>
+                        <div>
+			      <li>2023-202024年度江西农业大学“三育人”先进工作者</li>
+			      
+                        </div>
+                    </ul>
+                    <br>
+
+
+
+                    <h2 style="font-size: 20px;"><img src="images/paper.png" alt="" style="width: 15px;height: 15px;">&nbsp;科研项目情况</h2>
+                    <ul>
+                        <div class="publish">
+			    
+                            <li>江西省教育厅科技计划项目，2017.01-2019.12，2万元，主持，完成</li>
+                            
+                        </div>
+                    </ul>
+                    <br>
+			
+			
+                    <h2 style="font-size: 20px;"><img src="images/paper.png" alt="" style="width: 15px;height: 15px;">&nbsp;学术服务</h2>
+                    <ul>
+                        <div class="publish">
+                            
+			    <li>江西省计算机学会智能计算专委会副秘书长</li>
+                            
+                        </div>
+                    </ul>
+                    <br>
+			
+
+
+                    <h2 style="font-size: 20px;"> <img src="images/paper.png" alt="" style="width: 15px;height: 15px;">&nbsp;期刊论文（仅列第一作者和通讯作者）</h2>
+                    <ul>
+
+                        <div class="Journalpapers"></div>
+
+
+                        <!--定义模板-->
+                        <script type="text/html" id="templateJournalpapers">
+                            <% for(var i=0; i<items.length; i++){ %>
+                                    <% if(items[i].type==2) {%>
+
+                                        <li>
+
+                                            <%=#items[i].Cauthor%>. <a href=<%=items[i].url%> target="_blank"><%=#items[i].Ctitle%></a>.
+                                                <%=#items[i].Csource%>
+                                                    <%=#items[i].Cdescription%>
+
+                                        </li>                                        
+                                        <br>
+
+                                   <% } %>
+
+                                  <% if(items[i].type==1) {%>
+
+                                        <li>
+
+                                            <%=#items[i].author%>. <a href=<%=items[i].url%> target="_blank"><%=#items[i].title%>.</a>
+                                                 <%=#items[i].source%>
+                                                       <%=#items[i].Cdescription%>
+
+                                        </li>                                        
+                                        <br>
+                                 <% } %>
+
+
+                          <% } %>
+
+                        </script>
+                        <br>
+                    </ul>
+
+                    <h2 style="font-size: 20px;"> <img src="images/paper.png" alt=""  style="width: 15px;height: 15px;">&nbsp;会议论文（仅列第一作者和通讯作者）</h2>
+                    <ul>
+                        <div class="Conferencepapers"></div>
+                        <!--定义模板-->
+                        <script type="text/html" id="templateConferencepapers">
+                            <%for (var i =0; i<items.length; i++){%>
+                                <li>
+
+                                    <%=#items[i].author%>. <a href=<%=#items[i].url%> target="_blank"><%=#items[i].title%>.</a>
+                                        <%=#items[i].source%>
+                                            <%=#items[i].Cdescription%>
+
+                                </li>
+                                <br>                                
+                             <%}%>
+
+                        </script>
+                    </ul>
+                    <br>
+                    <br>
+                </div>
+
+                <!-- content-wrap ends here -->
+            </div>
+
+        </div>
     <script src="script.js">console.log('个人主页脚本已加载');</script>
 </body>
 </html>
